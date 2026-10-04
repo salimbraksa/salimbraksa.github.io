@@ -1,10 +1,10 @@
-"""Sync selected-work.json into both static pages. Run: python3 sync-content.py
+"""Sync selected-work.json into both static pages. Run: python3 scripts/sync-content.py
 Descriptions support Markdown paragraphs, bold, italic, code, and links.
 Static HTML keeps file:// previews and search/share crawlers working.
 """
 from pathlib import Path
 import json,re,html
-ROOT=Path(__file__).resolve().parent
+ROOT=Path(__file__).resolve().parent.parent
 
 def markdown(text):
     def inline(value):
@@ -36,7 +36,7 @@ def card(p):
         content = markdown(p['appDescription'])+''.join('<section class="card-project"><h3>'+esc(project['title'])+'</h3>'+markdown(project['description'])+'</section>' for project in p['projects'])
     return '<article class="project demo-project"><div class="copy">'+identity+content+tags+'</div><div class="visual device-demo">'+media+'</div></article>'
 
-projects=json.loads((ROOT/'selected-work.json').read_text())['projects']
+projects=json.loads((ROOT/'content/selected-work.json').read_text())['projects']
 for name in ('index.html','layout-draft.html'):
     path=ROOT/name
     source=path.read_text()
