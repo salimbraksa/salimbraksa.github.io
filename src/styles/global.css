@@ -64,9 +64,9 @@ html[data-theme="dark"] .app-heading .app-rating .app-link{border-color:#515b49}
 
 .hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:normal}
 
-/* Palette preview: Slate & Blue */
-:root{--palette-bg:#F5F3EE;--palette-card:#FCFBF7;--palette-text:#292923;--palette-muted:#68675F;--palette-accent:#2563EB;--palette-on-accent:#FFFFFF;--palette-border:#DDD9CF;--palette-panel:#E7E5DD}
-html[data-theme="dark"]{--palette-bg:#101722;--palette-card:#192231;--palette-text:#E8EDF5;--palette-muted:#A5B3C8;--palette-accent:#83ADFF;--palette-on-accent:#101722;--palette-border:#344259;--palette-panel:#222F43}
+/* Original beige and green palette */
+:root{--palette-bg:#F5F3EE;--palette-card:#FCFBF7;--palette-text:#242923;--palette-muted:#65705F;--palette-accent:#263E30;--palette-on-accent:#FFFFFF;--palette-border:#D7D8CE;--palette-panel:#E7E5DD}
+html[data-theme="dark"]{--palette-bg:#171C18;--palette-card:#222A23;--palette-text:#EDF0E8;--palette-muted:#AEB9A7;--palette-accent:#C3D9B4;--palette-on-accent:#1A271C;--palette-border:#394237;--palette-panel:#30392C}
 html:root body{background:var(--palette-bg);color:var(--palette-text)}
 html:root header,html:root .more-row,html:root footer,html:root .project.demo-project,html:root .tags span,html:root .button,html:root .theme-switch,html:root .github-avatar{border-color:var(--palette-border)}
 html:root .project.demo-project{background:var(--palette-card)}
