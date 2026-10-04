@@ -21,7 +21,8 @@
           "title": "Onboarding Guide & Action Plate Customization",
           "description": "#### Onboarding Guide\n\nI built the full onboarding guide to help users discover Moment’s manual camera controls and learn how to use them. These features aren’t always obvious when you first open the app.\n\nThe main challenge was highlighting controls that users can rearrange in the Action Plate. The guide needed to find each control in its current position, rather than rely on fixed coordinates, so it would still work with a customized layout.\n\n#### Action Plate Customization\n\nI built the Action Plate Browser, where users can choose between Action Plates, change the plate’s color, and rearrange or remove controls.\n\nSome Action Plates have controls with custom shapes, which made their UI more challenging to implement. I used SwiftUI’s Path API to draw those shapes."
         }
-      ]
+      ],
+      "featured": true
     },
     {
       "id": "hungerstation",
@@ -45,7 +46,8 @@
           "title": "Order Details Redesign & App Responsiveness",
           "description": "#### Order Details Redesign\n\nI implemented much of the Order Details redesign as part of the Post Order squad, including the map header’s scroll behavior and the navigation bar transition. I also improved scrolling performance by using the Animation Hitches instrument to identify and resolve rendering bottlenecks.\n\n#### Improving App Responsiveness\n\nI proposed and led an initiative to reduce production app hangs on the Foundation team, from improving diagnostics to implementing and monitoring fixes. I improved app hang observability by enriching Sentry reports with stack traces, making it easier to identify root causes. I prioritized issues by user impact, implemented fixes, and coordinated work across the team. I monitored each fix in production and continued iterating until we reached our hang-free rate target.\n\nThe main challenge was that most hangs were difficult to reproduce in development. Some also originated in third-party libraries, which required finding workarounds when a direct fix wasn’t possible."
         }
-      ]
+      ],
+      "featured": true
     },
     {
       "id": "sainsburys",
@@ -68,7 +70,8 @@
           "title": "Voice-based shopping lists",
           "description": "I built a voice-based shopping list feature that turns a recording into a structured list with AI. Users describe what they need instead of typing each item."
         }
-      ]
+      ],
+      "featured": false
     }
   ]
 }
