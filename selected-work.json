@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": "moment",
+      "appName": "Moment Pro Camera II",
+      "technologies": [
+        "Swift",
+        "SwiftUI",
+        "AVFoundation"
+      ],
+      "icon": "moment-app-icon.png",
+      "appStoreUrl": "https://apps.apple.com/us/app/moment-pro-camera-ii/id6748837351?uo=4",
+      "rating": 4.46652,
+      "video": "moment-demo.mp4",
+      "poster": "moment-poster.jpg",
+      "ratingCount": 478,
+      "ratingStorefront": "us",
+      "appDescription": "Moment Pro Camera II is an iPhone camera app with manual controls for settings like exposure, shutter speed, and ISO. These features aren’t always obvious when you first open the app, so I built the full onboarding guide to help users discover them and learn how to use them.",
+      "projects": [
+        {
+          "title": "Onboarding Guide & Action Plate Customization",
+          "description": "The main challenge was highlighting controls that users can rearrange in the Action Plate. The guide needed to find each control in its current position, rather than rely on fixed coordinates, so it would still work with a customized layout.\n\nI built the Action Plate Browser, where users can choose between different Action Plates and customize each one by changing its color and rearranging or removing controls.\n\nSome Action Plates have controls with custom shapes, which made their UI more challenging to implement. I used SwiftUI’s Path API to draw those shapes."
+        }
+      ]
+    },
+    {
+      "id": "hungerstation",
+      "appName": "HungerStation",
+      "technologies": [
+        "Swift",
+        "UIKit",
+        "Sentry",
+        "Instruments"
+      ],
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/67/d4/7667d447-fa81-5868-4be7-72b38caa078a/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+      "appStoreUrl": "https://apps.apple.com/sa/app/hungerstation-food-delivery/id596011949?uo=4",
+      "rating": 4.42927,
+      "video": "hungerstation.mp4",
+      "poster": "hungerstation-poster.jpg",
+      "ratingCount": 2185594,
+      "ratingStorefront": "sa",
+      "appDescription": "HungerStation is a food delivery app that lets customers browse restaurants and order meals.",
+      "projects": [
+        {
+          "title": "Order Details Redesign & App Responsiveness",
+          "description": "I worked on the Order Details redesign and reducing app hangs to improve the app’s responsiveness."
+        }
+      ]
+    },
+    {
+      "id": "sainsburys",
+      "appName": "Sainsbury’s",
+      "technologies": [
+        "Swift",
+        "SwiftUI",
+        "AVFoundation"
+      ],
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c5/c6/bc/c5c6bcc9-0e03-9080-1fe9-58d7c20cb64a/SainsburysGol-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "appStoreUrl": "https://apps.apple.com/gb/app/sainsburys/id1086056964?uo=4",
+      "rating": 4.71831,
+      "video": null,
+      "poster": null,
+      "ratingCount": 228410,
+      "ratingStorefront": "gb",
+      "appDescription": "The Sainsbury’s grocery app helps customers shop for groceries on their phone.",
+      "projects": [
+        {
+          "title": "Voice-based shopping lists",
+          "description": "I built a voice-based shopping list feature that turns a recording into a structured list with AI. Users describe what they need instead of typing each item."
+        }
+      ]
+    }
+  ]
+}
