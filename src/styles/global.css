@@ -98,3 +98,5 @@ html:root .copyright{color:var(--palette-muted)}
 @supports(corner-shape:squircle){.device-screen{corner-shape:squircle}}
 
 .demo-device{background:var(--palette-panel);border-color:var(--palette-panel)}
+
+.copy h4{font-size:15px;font-weight:600;line-height:1.4;margin:10px 0 10px;color:var(--palette-text)}.copy p+h4{margin-top:18px}

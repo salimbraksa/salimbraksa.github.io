@@ -15,11 +15,11 @@
       "poster": "assets/images/posters/moment-poster.jpg",
       "ratingCount": 478,
       "ratingStorefront": "us",
-      "appDescription": "Moment Pro Camera II is an iPhone camera app with manual controls for settings like exposure, shutter speed, and ISO. These features aren’t always obvious when you first open the app, so I built the full onboarding guide to help users discover them and learn how to use them.",
+      "appDescription": "Moment Pro Camera II is an iPhone camera app with manual controls for settings like exposure, shutter speed, and ISO.",
       "projects": [
         {
           "title": "Onboarding Guide & Action Plate Customization",
-          "description": "The main challenge was highlighting controls that users can rearrange in the Action Plate. The guide needed to find each control in its current position, rather than rely on fixed coordinates, so it would still work with a customized layout.\n\nI built the Action Plate Browser, where users can choose between different Action Plates and customize each one by changing its color and rearranging or removing controls.\n\nSome Action Plates have controls with custom shapes, which made their UI more challenging to implement. I used SwiftUI’s Path API to draw those shapes."
+          "description": "#### Onboarding Guide\n\nThese features aren’t always obvious when you first open the app, so I built the full onboarding guide to help users discover them and learn how to use them.\n\nThe main challenge was highlighting controls that users can rearrange in the Action Plate. The guide needed to find each control in its current position, rather than rely on fixed coordinates, so it would still work with a customized layout.\n\n#### Action Plate Customization\n\nI built the Action Plate Browser, where users can choose between different Action Plates and customize each one by changing its color and rearranging or removing controls.\n\nSome Action Plates have controls with custom shapes, which made their UI more challenging to implement. I used SwiftUI’s Path API to draw those shapes."
         }
       ]
     },
@@ -43,7 +43,7 @@
       "projects": [
         {
           "title": "Order Details Redesign & App Responsiveness",
-          "description": "As part of the Post Order squad, I implemented much of the Order Details redesign, including the map header’s scroll behavior and the navigation bar transition. I also improved scrolling performance by using the Animation Hitches instrument to identify and resolve rendering bottlenecks.\n\nOn the Foundation team, I proposed and led an initiative to reduce production app hangs. I improved app hang observability by enriching Sentry reports with stack traces, making it easier to identify root causes. I prioritized issues by user impact, implemented fixes, and coordinated work across the team. I monitored each fix in production and continued iterating until we reached our hang-free rate target.\n\nThe main challenge was that most hangs were difficult to reproduce in development. Some also originated in third-party libraries, which required finding workarounds when a direct fix wasn’t possible."
+          "description": "#### Order Details Redesign\n\nAs part of the Post Order squad, I implemented much of the Order Details redesign, including the map header’s scroll behavior and the navigation bar transition. I also improved scrolling performance by using the Animation Hitches instrument to identify and resolve rendering bottlenecks.\n\n#### Improving App Responsiveness\n\nOn the Foundation team, I proposed and led an initiative to reduce production app hangs. I improved app hang observability by enriching Sentry reports with stack traces, making it easier to identify root causes. I prioritized issues by user impact, implemented fixes, and coordinated work across the team. I monitored each fix in production and continued iterating until we reached our hang-free rate target.\n\nThe main challenge was that most hangs were difficult to reproduce in development. Some also originated in third-party libraries, which required finding workarounds when a direct fix wasn’t possible."
         }
       ]
     },
