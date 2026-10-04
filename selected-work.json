@@ -55,7 +55,7 @@
         "SwiftUI",
         "AVFoundation"
       ],
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c5/c6/bc/c5c6bcc9-0e03-9080-1fe9-58d7c20cb64a/SainsburysGol-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "icon": "sainsburys-app-icon.svg",
       "appStoreUrl": "https://apps.apple.com/gb/app/sainsburys/id1086056964?uo=4",
       "rating": 4.71831,
       "video": null,
