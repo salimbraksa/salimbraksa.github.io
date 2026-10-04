@@ -42,7 +42,7 @@ const markdown = (text: string) => marked.parse(text.replace(/&/g, '&amp;').repl
   </div>
   <div class="visual device-demo">
     {app.video ? <div class="demo-device recorded-device">
-      <video controls playsinline preload="metadata" poster={app.poster ? asset(app.poster) : undefined} aria-label={`${app.appName} demo`} style="aspect-ratio:auto"><source src={asset(app.video)} type="video/mp4" /></video>
+      <div class="device-screen"><video controls playsinline preload="metadata" poster={app.poster ? asset(app.poster) : undefined} aria-label={`${app.appName} demo`} style="aspect-ratio:auto"><source src={asset(app.video)} type="video/mp4" /></video></div>
     </div> : <div class="demo-device">
       <div class="device-notch" aria-hidden="true"></div>
       <div class="demo-placeholder"><span class="eyebrow">{app.appName}</span><strong>Demo coming soon</strong><p>{app.projects[0].title}</p></div>
