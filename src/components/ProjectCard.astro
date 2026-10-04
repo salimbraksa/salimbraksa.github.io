@@ -1,0 +1,51 @@
+---
+import { marked } from 'marked';
+interface Props {
+  app: {
+    id: string; appName: string; appDescription: string; icon: string;
+    appStoreUrl: string; rating: number; ratingStorefront?: string;
+    video?: string | null; poster?: string | null; technologies: string[];
+    projects: { title: string; description: string }[];
+  };
+}
+const { app } = Astro.props;
+const rating = Math.max(0, Math.min(5, app.rating));
+const storefront = { us: 'US', sa: 'Saudi Arabian', gb: 'UK' }[app.ratingStorefront ?? ''];
+const asset = (path: string) => path.startsWith('assets/') ? `/${path}` : path;
+// Content is maintained locally; escape raw HTML before rendering Markdown.
+const markdown = (text: string) => marked.parse(text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'), { async: false });
+---
+<article class="project demo-project">
+  <div class="copy">
+    <div class="app-identity">
+      <img class:list={['app-icon', 'featured-icon', { 'moment-app-icon': app.id === 'moment' }]} src={asset(app.icon)} alt="" width="48" height="48" />
+      <div class="app-heading">
+        <div class="eyebrow">{app.appName}</div>
+        <div class="app-rating">
+          <span class="rating" aria-label={`${rating.toFixed(1)} out of 5 stars on the ${storefront} App Store`}>
+            <span class="rating-stars" aria-hidden="true"><span>★★★★★</span><span class="rating-fill" style={`width:${rating * 20}%`}>★★★★★</span></span>
+            <span class="rating-number">{rating.toFixed(1)}</span>
+          </span>
+          <a class="app-link" href={app.appStoreUrl} aria-label={`${app.appName} on the App Store`}>App Store ↗</a>
+        </div>
+      </div>
+    </div>
+    {app.projects.length === 1 ? <>
+      <h3>{app.projects[0].title}</h3>
+      <Fragment set:html={markdown(app.appDescription)} />
+      <Fragment set:html={markdown(app.projects[0].description)} />
+    </> : <>
+      <Fragment set:html={markdown(app.appDescription)} />
+      {app.projects.map(project => <section class="card-project"><h3>{project.title}</h3><Fragment set:html={markdown(project.description)} /></section>)}
+    </>}
+    <div class="tags">{app.technologies.map(tag => <span>{tag}</span>)}</div>
+  </div>
+  <div class="visual device-demo">
+    {app.video ? <div class="demo-device recorded-device">
+      <video controls playsinline preload="metadata" poster={app.poster ? asset(app.poster) : undefined} aria-label={`${app.appName} demo`} style="aspect-ratio:auto"><source src={asset(app.video)} type="video/mp4" /></video>
+    </div> : <div class="demo-device">
+      <div class="device-notch" aria-hidden="true"></div>
+      <div class="demo-placeholder"><span class="eyebrow">{app.appName}</span><strong>Demo coming soon</strong><p>{app.projects[0].title}</p></div>
+    </div>}
+  </div>
+</article>

@@ -1,20 +1,24 @@
 # Salim Braksa — Portfolio
 
-Static portfolio hosted on GitHub Pages. No build step required.
+Astro portfolio hosted on GitHub Pages. The existing design and theme are preserved.
 
 ## Structure
 
-- `index.html` — published page
-- `layout-draft.html` — local preview
-- `assets/css/styles.css` — layout, themes, and styling
-- `assets/js/theme.js` — system theme and theme controls
-- `assets/js/main.js` — dynamic experience and copyright years
-- `assets/images/` — app icons, video posters, and social images
-- `assets/videos/` — project recordings
-- `content/selected-work.json` — featured project content; descriptions support Markdown
-- `scripts/sync-content.py` — synchronizes project content into both pages
+- `src/pages/index.astro` — single page template
+- `src/components/ProjectCard.astro` — reusable project card
+- `src/styles/global.css` — layout and light/dark themes
+- `content/selected-work.json` — project descriptions in Markdown, ratings, tags, and media
+- `public/assets/` — images, videos, and theme scripts
+- `.github/workflows/deploy.yml` — automatic GitHub Pages publishing
 
-## Editing
+## Local development
 
-After editing project content, run `python3 scripts/sync-content.py` from this folder.
-Keep page structure changes synchronized between both HTML files. Open `layout-draft.html` for a local preview.
+Run `npm install`, then `npm run dev` and open the local URL printed in the terminal.
+Edit the JSON or page components; Astro refreshes the preview automatically.
+The old file-based preview and Python synchronization script are no longer needed.
+
+## Publishing
+
+Select **GitHub Actions** under repository Settings → Pages → Source.
+Push to `main` to generate and publish the static site automatically.
+`npm run build` generates `dist/`; `npm run preview` previews that output.
