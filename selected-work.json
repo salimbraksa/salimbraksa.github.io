@@ -39,11 +39,11 @@
       "poster": "hungerstation-poster.jpg",
       "ratingCount": 2185594,
       "ratingStorefront": "sa",
-      "appDescription": "HungerStation is a food delivery app that lets customers browse restaurants and order meals.",
+      "appDescription": "HungerStation is a leading food delivery app in Saudi Arabia and part of Delivery Hero.",
       "projects": [
         {
           "title": "Order Details Redesign & App Responsiveness",
-          "description": "I worked on the Order Details redesign and reducing app hangs to improve the app’s responsiveness."
+          "description": "As part of the Post Order squad, I implemented much of the Order Details redesign, including the map header’s scroll behavior and the navigation bar transition. I also improved scrolling performance by using the Animation Hitches instrument to identify and resolve rendering bottlenecks.\n\nOn the Foundation team, I proposed and led an initiative to reduce production app hangs. I improved app hang observability by enriching Sentry reports with stack traces, making it easier to identify root causes. I prioritized issues by user impact, implemented fixes, and coordinated work across the team. I monitored each fix in production and continued iterating until we reached our hang-free rate target.\n\nThe main challenge was that most hangs were difficult to reproduce in development. Some also originated in third-party libraries, which required finding workarounds when a direct fix wasn’t possible."
         }
       ]
     },
